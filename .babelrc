@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": { "browsers": ["last 2 versions"]},
+      "modules": "cjs",
+      "useBuiltIns": "usage",
+      "debug": false
+    }],
+    ["@babel/preset-react", {
+      "pragma": "React.createElement", // default pragma is React.createElement
+      "pragmaFrag": " React.Fragment", // default is React.Fragment
+      "throwIfNamespace": true // defaults to true
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        "react-hot-loader/babel"
+      ]
+    }}
+}
